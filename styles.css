@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+section {
+    margin: 20px;
+    padding: 12px 6px;
+    border: solid 2px gray;
+    border-radius: 5px;
+    width: 50%;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        width: 100%;
+    }
+}

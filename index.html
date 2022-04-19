@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartoon network OP!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js"></script>
+    <script src="gist.js"></script>
+</head>
+<body>
+    <section>
+        <h3>Intent URLS</h3>
+        <p>working on
+            <ul><li>
+                Chrome - android
+            </li><li>
+                In app browsers - android
+            </li></ul>
+        </p>
+        <p>not working on
+            <ul><li>
+                Safari - iOS
+            </li><li>
+                Desktop
+            </li></ul>
+        </p>
+        <p> Need to check scenerio where 2 apps can intercept deep links and user clicks cancel</p>
+        <a  onclick="redirectViaIntentUrl()" href="#"> Click to launch</a>
+    </section>
+    <section>
+        <h3>Javascript solution</h3>
+        <p>working on
+            <ul><li>
+                Chrome - android
+            </li><li>
+                Desktop - with delay
+            </li></ul>
+        </p>
+        <p>not working on
+            <ul><li>
+                Safari - iOS (redirection happening on both app and web)
+            </li></ul>
+        </p>
+        <a  onclick="redirectUsingEventsForFallback()" href="#"> Click to launch</a>
+        <p id="output"></p>
+    </section>
+    <section>
+        <h3>Timeout solution</h3>
+        <p>working on
+            <ul><li>Desktop - with delay
+            </li><li>
+            </li></ul>
+        </p>
+        <p>not working on
+            <ul><li>Android - redirection happens if user comes back
+            </li></ul>
+        </p><a  onclick="redirectUsingTimeout()" href="#"> Click to launch</a>
+    </section>
+    <!-- Ideally when a new kite url is launched device should be able intercept, like how reddit urls happens. But those arent deep links -->
+    <script>
+    printOut("ready");
+    </script>
+</body>
+</html>
